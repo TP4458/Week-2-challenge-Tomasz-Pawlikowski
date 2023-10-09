@@ -1,0 +1,10 @@
+#wip {
+    text-align: center;
+    position: absolute;
+    top:50%;
+    bottom: 50%;
+    width: 100%;
+    font-family: Impact, sans-serif;
+    color: #726650;
+    font-size: large;
+}
