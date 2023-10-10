@@ -1,6 +1,7 @@
 :root {
-    --main-bg-color: #265d6a;
+    --main-bg-color: hsl(162, 11%, 53%);
     --main-bd-color: #457884;
+    --text-color: #fff5e2;
 }
 
 
@@ -9,47 +10,52 @@ body{
     margin-right:50px;
     min-width: 400px;
     background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
     
-
-
 #headertxt {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 25px;
     font-family: sans-serif;
     font-size: 6vw;
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    background: linear-gradient(to left, #c1f13b, #e4da57, #f8f4c0, #e0cb51, #ffc400);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-      
 }
-nav{
+
+nav {
     margin: 0px;
     border:1px solid black;
 }
+
 nav ul li{
     display:flex;
     display: inline;
     margin:0px;
     padding:10px;
+    color: var(--text-color);
 }
 
 #aboutme {
     padding:10px 100px 10px 100px;
     display: inline-flex;
-    /*min-width: 500px;*/
     max-width: 100%;
-    
-   }
+}
+#aboutme p {
+    padding:5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: large;
+}
 
 #avatar{
     max-height:250px;
-
+    border:black solid 2px;
 }
 .app-display {
     display:flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #app-box-prime a{
@@ -60,52 +66,72 @@ nav ul li{
     align-self: center;
 }
 
-#app-box-prime img{        /*jak zrobic zeby zdjecie bylo fixed| malo wazne*/
-    min-width: 100%;        /*fills page width*/
+#app-box-prime img{        
+    min-width: 100%;       
     max-height: 400px;
-    object-fit: cover;      /*doesnt stretch image*/
-    }
+    object-fit: cover;      
+}
 
-.app-box {                  /*podzielic wolne miejsce rowno pomiedzy 4 albo 2*/
+.app-box {          
+    margin:5px;        
     display:flex;
     position:relative;
-    width:  25%;
+    width:23%;
     min-height: 200px;
-    
-    }
+       
+}
+
 .app-box a{
     display:block;
     height:100%;
     width: 100%;
-
 }
+
 #app-img1 {
     background-image: url(../Images/DSC_0548.jpg);
 }
+
 #app-img2 {
     background-image: url(../Images/DSC_0540.jpg);
 }
+
 #app-img3 {
     background-image: url(../Images/DSC_0572\ -\ Copy.jpg);
 }
+
 #app-img4 {
     background-image: url(../Images/DSC_0346.jpg);
 }
 
 .app-box img {
     object-fit: contain;
-   }
+}
 
-.app-label {                /* nie przesowa sie rownno ze app-box*/
-    font-style: italic;
-    font-size: 20px;
-    min-height: 50px;
+.app-label {                
+    font-style: bolder;
+    text-transform: uppercase;
+    text-decoration: dashed;
+    color:var(--text-color);
+    font-size: 22px;
+        min-height: 50px;
     min-width: 175px;
     position: absolute;
     bottom:0%;
-    pointer-events: none; 
-}
+    pointer-events: none;
 
+}
+footer {
+    text-align: center;
+    color: var(--text-color);
+}
+footer li{
+    display: inline-flex;
+}
+footer a{
+    margin-left: 25px;
+    font-size: 25px;
+    color: var(--text-color);
+}
 
 @media screen and (max-width: 768px) {
     body {
@@ -116,7 +142,6 @@ nav ul li{
         flex-wrap: wrap;
         margin-top: 10px;
     }
-
     .app-box{
         flex-grow: 1;
         width: 45%;
@@ -128,7 +153,6 @@ nav ul li{
 @media screen and (max-width: 576px) {
     body{
         margin: 0;
-
     } 
     #aboutme {
         text-wrap: wrap;
