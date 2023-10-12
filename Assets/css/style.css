@@ -1,9 +1,9 @@
 :root {
-    --main-bg-color: hsl(162, 11%, 53%);
+    --main-bg-color: hsl(35, 23%, 74%);
     --main-bd-color: #457884;
-    --text-color: #fff5e2;
+    --text-color: #3f3d39;
+    --text-bright: #eee2c9;
 }
-
 
 body{
     margin-left: 50px;
@@ -11,23 +11,25 @@ body{
     min-width: 400px;
     background-color: var(--main-bg-color);
     color: var(--text-color);
+    font-family: monospace;
 }
     
 #headertxt {
-    margin-top: 0px;
-    margin-bottom: 0px;
     margin-left: 25px;
-    font-family: sans-serif;
-    font-size: 6vw;
-    background: linear-gradient(to left, #c1f13b, #e4da57, #f8f4c0, #e0cb51, #ffc400);
-    background-clip: text;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size: 4vw;                         /*vw adapts font size to viewport width*/
+    background: linear-gradient(to left, #b8d7ff, #5799e4, #7ba0f0, #1c8ef8, #00325a);
+    background-clip: text;                  /*applies painting area to text*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 nav {
     margin: 0px;
-    border:1px solid black;
+    border-top: #3f3d39 solid 1px;
+    border-bottom:#3f3d39 solid 1px;
 }
 
 nav ul li{
@@ -35,17 +37,25 @@ nav ul li{
     display: inline;
     margin:0px;
     padding:10px;
+}
+
+nav ul li a{
+    font-family: monospace;
     color: var(--text-color);
+    text-decoration: none;
 }
 
 #aboutme {
-    padding:10px 100px 10px 100px;
+    padding:10px 100px 20px 100px;
+    margin-bottom: 20px;
     display: inline-flex;
     max-width: 100%;
+    border-bottom: #3f3d39 solid 1px;
 }
+
 #aboutme p {
     padding:5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
     font-style: oblique;
     font-size: large;
 }
@@ -54,23 +64,29 @@ nav ul li{
     max-height:250px;
     border:black solid 2px;
 }
+
 .app-display {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+
+#app-box-prime:hover {
+    scale:102%;
+    opacity: 0.8;
 }
 
 #app-box-prime a{
     display:flex;
     position: relative;
-    max-height: 400px;
-    max-width: 100%;
-    align-self: center;
-}
+    border: #3f3d39 2px solid;
+    border-radius: 50px;
+ }
 
 #app-box-prime img{        
     min-width: 100%;       
     max-height: 400px;
-    object-fit: cover;      
+    object-fit:cover;       /*fills box without stretching*/
+    border-radius: 50px;
 }
 
 .app-box {          
@@ -79,7 +95,13 @@ nav ul li{
     position:relative;
     width:23%;
     min-height: 200px;
-       
+    border:#3f3d39 2px solid;
+    border-radius: 50px;
+}
+
+.app-box:hover {
+    scale:102%;
+    opacity: 0.9;
 }
 
 .app-box a{
@@ -104,37 +126,36 @@ nav ul li{
     background-image: url(../Images/0346.jpg);
 }
 
-.app-box img {
-    object-fit: contain;
-}
-
-.app-label {                
+.app-label {        
+    padding:7px;        
     font-style: bolder;
     text-transform: uppercase;
-    text-decoration: dashed;
-    color:var(--text-color);
+    font-family: monospace;
+    color:var(--text-bright);
     font-size: 22px;
     min-height: 50px;
     min-width: 175px;
     position: absolute;
     bottom:0%;
-    pointer-events: none;
-
+    pointer-events: none;   /*can click through the label box on the underying element*/
 }
+
 footer {
     text-align: center;
     color: var(--text-color);
 }
+
 footer li{
     display: inline-flex;
 }
+
 footer a{
     margin-left: 25px;
     font-size: 25px;
     color: var(--text-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1120px) {
     body {
         margin:10px;
     }
@@ -151,7 +172,13 @@ footer a{
 
     }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+    #headertxt {
+        margin:5px;
+        font-size: 30px;
+        text-align: center;
+    }
+   
     body{
         margin: 0;
     } 
